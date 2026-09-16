@@ -1,0 +1,80 @@
+@import "lenis/dist/lenis.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: "Geist", "Inter Tight", "Plus Jakarta Sans", system-ui, sans-serif;
+    --font-display: "Geist", "Inter Tight", sans-serif;
+    --font-mono: "Geist Mono", "JetBrains Mono", monospace;
+    --color-accent-dynamic: #3B82F6;
+    --color-accent-glow: rgba(59, 130, 246, 0.35);
+  }
+
+  html {
+    scroll-behavior: auto !important;
+    font-family: var(--font-sans);
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(150, 150, 150, 0.25);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent-dynamic);
+  }
+}
+
+.text-accent {
+  color: var(--color-accent-dynamic) !important;
+}
+
+.bg-accent {
+  background-color: var(--color-accent-dynamic) !important;
+}
+
+.border-accent {
+  border-color: var(--color-accent-dynamic) !important;
+}
+
+/* Hide scrollbar for clean horizontal scrollers */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Lenis smooth scrolling support */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Hide top navbar when case study modal is open */
+body.modal-open header {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateY(-20px) !important;
+  transition: all 0.25s ease-in-out !important;
+}
