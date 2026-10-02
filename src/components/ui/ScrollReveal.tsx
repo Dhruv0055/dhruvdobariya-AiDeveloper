@@ -57,7 +57,7 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
         delay,
         ease: [0.16, 1, 0.3, 1],
       }}
-      className={className}
+      className={`${className} transform-gpu`}
       {...props}
     >
       {children}

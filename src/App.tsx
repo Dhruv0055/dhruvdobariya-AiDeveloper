@@ -22,13 +22,10 @@ export function App() {
 
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.4,
-      easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
-      orientation: "vertical",
-      gestureOrientation: "vertical",
+      lerp: 0.09,
+      wheelMultiplier: 1.0,
+      touchMultiplier: 1.0,
       smoothWheel: true,
-      wheelMultiplier: 0.9,
-      touchMultiplier: 1.2,
       syncTouch: false,
     });
 
@@ -48,7 +45,7 @@ export function App() {
         const el = document.querySelector(href);
         if (el) {
           e.preventDefault();
-          lenis.scrollTo(el as HTMLElement, { offset: -70, duration: 1.4 });
+          lenis.scrollTo(el as HTMLElement, { offset: -70, duration: 0.85 });
         }
       }
     };

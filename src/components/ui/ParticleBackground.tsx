@@ -37,7 +37,7 @@ export const ParticleBackground: React.FC = () => {
     window.addEventListener("mousemove", handleMouseMove);
     document.addEventListener("mouseleave", handleMouseLeave);
 
-    const particleCount = Math.min(Math.floor((width * height) / 18000), 75);
+    const particleCount = Math.min(Math.floor((width * height) / 30000), 42);
     const particles: Array<{
       x: number;
       y: number;
@@ -59,21 +59,29 @@ export const ParticleBackground: React.FC = () => {
       particles.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        radius: Math.random() * 1.6 + 0.8,
+        vx: (Math.random() - 0.5) * 0.45,
+        vy: (Math.random() - 0.5) * 0.45,
+        radius: Math.random() * 1.5 + 0.8,
         alpha: Math.random() * 0.25 + 0.15,
         color: color,
       });
     }
 
+    const maxDist = 130;
+    const maxDistSq = maxDist * maxDist;
+    const mouseRadiusSq = mouse.radius * mouse.radius;
+
     const render = () => {
       ctx.clearRect(0, 0, width, height);
 
       const isDark = theme === "dark";
+      const strokeColorDark = "rgba(96, 165, 250,";
+      const strokeColorLight = "rgba(37, 99, 235,";
+      const baseStroke = isDark ? strokeColorDark : strokeColorLight;
 
-      // Draw particles with glowing trails
-      particles.forEach((p, idx) => {
+      // Draw particles and connect nearby links
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
         p.x += p.vx;
         p.y += p.vy;
 
@@ -82,57 +90,57 @@ export const ParticleBackground: React.FC = () => {
         if (p.y < 0) p.y = height;
         if (p.y > height) p.y = 0;
 
-        // Interactive mouse gravity repulsion/pull
+        // Interactive mouse repulsion/pull
         const dxMouse = mouse.x - p.x;
         const dyMouse = mouse.y - p.y;
-        const distMouse = Math.sqrt(dxMouse * dxMouse + dyMouse * dyMouse);
+        const distMouseSq = dxMouse * dxMouse + dyMouse * dyMouse;
 
-        if (distMouse < mouse.radius) {
-          const force = (1 - distMouse / mouse.radius) * 1.2;
+        if (distMouseSq < mouseRadiusSq && distMouseSq > 0) {
+          const distMouse = Math.sqrt(distMouseSq);
+          const force = (1 - distMouse / mouse.radius) * 1.1;
           p.x -= (dxMouse / distMouse) * force;
           p.y -= (dyMouse / distMouse) * force;
         }
 
-        // Draw glowing particle point
+        // Draw particle point (No heavy shadowBlur software filter)
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
         ctx.fillStyle = p.color;
         ctx.globalAlpha = p.alpha;
-        ctx.shadowBlur = isDark ? 4 : 2;
-        ctx.shadowColor = p.color;
         ctx.fill();
-        ctx.shadowBlur = 0;
 
-        // Connect nearby particles with subtle glowing links
-        for (let j = idx + 1; j < particles.length; j++) {
+        // Connect nearby particles
+        for (let j = i + 1; j < particles.length; j++) {
           const p2 = particles[j];
           const dx = p.x - p2.x;
           const dy = p.y - p2.y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
+          const distSq = dx * dx + dy * dy;
 
-          if (dist < 140) {
-            const lineAlpha = (1 - dist / 140) * (isDark ? 0.14 : 0.08);
+          if (distSq < maxDistSq) {
+            const dist = Math.sqrt(distSq);
+            const lineAlpha = (1 - dist / maxDist) * (isDark ? 0.12 : 0.07);
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = isDark ? "rgba(96, 165, 250," : "rgba(37, 99, 235,";
+            ctx.strokeStyle = baseStroke;
             ctx.globalAlpha = lineAlpha;
-            ctx.lineWidth = 0.8;
+            ctx.lineWidth = 0.75;
             ctx.stroke();
           }
         }
 
-        // Connect particles near the mouse cursor for a subtle magnetic web effect
-        if (distMouse < mouse.radius) {
+        // Connect to mouse if near
+        if (distMouseSq < mouseRadiusSq) {
+          const distMouse = Math.sqrt(distMouseSq);
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(mouse.x, mouse.y);
-          ctx.strokeStyle = isDark ? "rgba(59, 130, 246," : "rgba(37, 99, 235,";
-          ctx.globalAlpha = (1 - distMouse / mouse.radius) * (isDark ? 0.22 : 0.14);
-          ctx.lineWidth = 1;
+          ctx.strokeStyle = baseStroke;
+          ctx.globalAlpha = (1 - distMouse / mouse.radius) * (isDark ? 0.2 : 0.12);
+          ctx.lineWidth = 0.9;
           ctx.stroke();
         }
-      });
+      }
 
       ctx.globalAlpha = 1;
       animationFrameId = requestAnimationFrame(render);

@@ -39,7 +39,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, idx, onSelect }) => 
       {/* Image / Mockup Column with Parallax Depth Float */}
       <motion.div
         style={{ y: yMockup }}
-        className={`lg:col-span-7 ${isEven ? "lg:order-2" : "lg:order-1"}`}
+        className={`lg:col-span-7 ${isEven ? "lg:order-2" : "lg:order-1"} will-change-transform transform-gpu`}
         onClick={() => onSelect(project)}
       >
         <div className="group cursor-pointer relative rounded-3xl overflow-hidden bg-[#0F1015] border border-light-border dark:border-white/10 shadow-2xl hover:border-accent/50 transition-all duration-500">
