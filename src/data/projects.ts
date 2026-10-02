@@ -23,6 +23,27 @@ export const projects: Project[] = [
     accentColor: "#D97706"
   },
   {
+    id: "ryqon-digitals",
+    title: "Ryqon Digitals",
+    tagline: "Full-Stack Web, Mobile Apps & Growth Marketing Agency",
+    category: "Web Applications",
+    featured: true,
+    year: "2024",
+    description: "A high-conversion digital agency platform engineered for Ryqon Digitals, delivering custom full-stack web architectures, mobile apps, and data-driven marketing growth.",
+    longDescription: "Engineered for Ryqon Digitals to showcase full-stack development and synchronized growth marketing. Features sub-second load performance, Next.js 15 architectures, cross-platform mobile services, performance marketing funnels, and verified growth metrics (+3.8x Avg ROAS).",
+    highlights: [
+      "Next.js 15 & React full-stack responsive web platform with sub-second loading speeds",
+      "Cross-platform mobile applications showcase (Flutter & React Native)",
+      "High-ROAS performance marketing and lead generation funnel integration",
+      "Interactive case study modules, client review carousel, and instant CTA booking"
+    ],
+    metrics: ["+3.8x Avg ROAS", "Sub-Second Load", "Next.js 15 / Flutter"],
+    techStack: ["React", "Next.js 15", "TypeScript", "Tailwind CSS", "Vercel"],
+    liveUrl: "https://ryqon-digitals.vercel.app/",
+    image: "/projects/ryqon-digitals.png",
+    accentColor: "#2563EB"
+  },
+  {
     id: "the-body-lab-fitness",
     title: "The Body Lab Fitness",
     tagline: "Premier Luxury Fitness & Athletic Training Platform",

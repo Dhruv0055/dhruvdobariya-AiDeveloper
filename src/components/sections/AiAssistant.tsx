@@ -35,6 +35,9 @@ export const AiAssistant: React.FC = () => {
 
   const generateAnswer = (query: string): string => {
     const q = query.toLowerCase();
+    if (q.includes("ryqon") || q.includes("agency")) {
+      return aiResponses.ryqon || aiResponses.projects;
+    }
     if (q.includes("praval") || q.includes("jewel") || q.includes("gold")) {
       return aiResponses.praval || aiResponses.projects;
     }
