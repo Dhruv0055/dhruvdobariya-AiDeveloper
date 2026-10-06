@@ -59,11 +59,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, idx, onSelect }) => 
                 <div className="w-6" />
               </div>
 
-              <div className="relative aspect-[16/10] overflow-hidden bg-neutral-950">
+              <div className="relative aspect-[16/9] overflow-hidden bg-neutral-950">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-700 ease-out"
+                  className={`w-full h-full object-cover ${project.imagePosition || "object-top"} group-hover:scale-[1.03] transition-transform duration-700 ease-out`}
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-black font-mono text-xs font-bold shadow-xl transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">

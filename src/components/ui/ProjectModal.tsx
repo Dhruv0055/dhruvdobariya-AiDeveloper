@@ -112,7 +112,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-auto object-cover object-top max-h-[360px]"
+                  className={`w-full h-auto object-cover ${project.imagePosition || "object-top"} max-h-[420px]`}
                 />
               </div>
             ) : null}

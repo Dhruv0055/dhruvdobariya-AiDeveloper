@@ -50,7 +50,7 @@ export const About: React.FC = () => {
             My work focuses on what truly matters: <span className="text-light-text dark:text-dark-text font-medium">ultra-fast loading speeds, clean responsive layouts, intuitive user journeys, and reliable cloud backends</span>.
           </p>
           <p>
-            Whether engineering platforms like <em>The Body Lab Fitness</em> or crafting interactive web applications, I bring meticulous attention to every pixel and line of code.
+            Whether engineering platforms like <em>Mahadev Fitness Gym</em> or crafting interactive web applications, I bring meticulous attention to every pixel and line of code.
           </p>
 
           <div className="pt-2 flex flex-wrap items-center gap-4">

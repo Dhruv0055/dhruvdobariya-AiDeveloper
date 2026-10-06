@@ -44,25 +44,26 @@ export const projects: Project[] = [
     accentColor: "#2563EB"
   },
   {
-    id: "the-body-lab-fitness",
-    title: "The Body Lab Fitness",
-    tagline: "Premier Luxury Fitness & Athletic Training Platform",
+    id: "mahadev-fitness",
+    title: "Mahadev Fitness Gym",
+    tagline: "Surat's 5.0★ Premier Strength, Hypertrophy & Olympic Weightlifting Facility",
     category: "Web Applications",
     featured: true,
-    year: "2024",
-    description: "Modern web application for Surat's premier luxury fitness centre with official Hammer Strength & Life Fitness equipment setup.",
-    longDescription: "A high-performance digital experience engineered for The Body Lab Fitness brand. Features high-energy typography, dynamic facilities overview (Hammer Strength, Steam & Spa, 1-on-1 Mentors), membership sign-up pipelines, and WhatsApp desk integration.",
+    year: "2025",
+    description: "A high-performance modern web platform for Surat's 5.0★ premier fitness center at Mansarovar Society, Yogi Chowk. Features Olympic free weight zones, class schedules, and direct WhatsApp onboarding.",
+    longDescription: "A modern, high-conversion web platform engineered for Mahadev Fitness Gym located at Mansarovar Society, Yogi Chowk, Surat. Built with high-octane athletic visuals, comprehensive Olympic strength & free-weight equipment showcases, dynamic morning/evening batch schedules (5:30 AM & 5:00 PM), verified 5.0★ Google review integrations, and instant WhatsApp desk conversion pipelines.",
     highlights: [
-      "High-energy visual layout tailored for luxury fitness branding",
-      "Official Hammer Strength & Life Fitness facility showcases",
-      "Steam & Spa, Personal Training & Nutrition schedules",
-      "Integrated WhatsApp Desk & membership conversion flow"
+      "High-octane responsive visual architecture engineered for premier athletic gym branding",
+      "Heavy Olympic free weights, strength zones & certified trainer showcases",
+      "Dynamic morning & evening shift schedules (5:30 AM & 5:00 PM batches)",
+      "Instant 1-click WhatsApp desk integration & membership conversion funnel"
     ],
-    metrics: ["Surat's Premier Gym", "Luxury Facilities", "100% Mobile Optimized"],
+    metrics: ["5.0★ Rated (100+ Reviews)", "Olympic Strength Zone", "100% Mobile Optimized"],
     techStack: ["React", "Next.js", "Tailwind CSS", "TypeScript", "Vercel"],
-    liveUrl: "https://thebodylabfitness-4n9zp8pmr-dhruv-dobariya.vercel.app/",
-    image: "/projects/body-lab-fitness.png",
-    accentColor: "#EF4444"
+    liveUrl: "https://mahadevfitness-five.vercel.app/",
+    image: "/projects/mahadev-fitness.png",
+    imagePosition: "object-left-top",
+    accentColor: "#FF2626"
   },
   {
     id: "qr-cafe-management",

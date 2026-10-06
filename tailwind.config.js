@@ -5,6 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   darkMode: "class",
+  safelist: [
+    "object-left-top",
+    "object-top",
+    "object-center",
+    "object-left",
+  ],
   theme: {
     extend: {
       fontFamily: {

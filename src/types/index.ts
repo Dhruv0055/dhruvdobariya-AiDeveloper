@@ -13,6 +13,7 @@ export interface Project {
   githubUrl?: string;
   liveUrl?: string;
   image?: string;
+  imagePosition?: string;
   accentColor: string;
 }
 

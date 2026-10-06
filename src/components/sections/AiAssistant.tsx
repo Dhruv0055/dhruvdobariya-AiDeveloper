@@ -41,8 +41,8 @@ export const AiAssistant: React.FC = () => {
     if (q.includes("praval") || q.includes("jewel") || q.includes("gold")) {
       return aiResponses.praval || aiResponses.projects;
     }
-    if (q.includes("body") || q.includes("fitness") || q.includes("gym")) {
-      return aiResponses.bodylab || aiResponses.projects;
+    if (q.includes("mahadev") || q.includes("fitness") || q.includes("gym") || q.includes("body")) {
+      return aiResponses.mahadev || aiResponses.bodylab || aiResponses.projects;
     }
     if (q.includes("skill") || q.includes("tech") || q.includes("stack") || q.includes("tool") || q.includes("antigravity") || q.includes("claude") || q.includes("lovable")) {
       return aiResponses.skills;
