@@ -142,7 +142,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, idx, onSelect }) => 
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-light-text text-light-bg dark:bg-white dark:text-dark-bg font-mono text-xs font-normal hover:opacity-90 transition-all shadow-md hover:scale-[1.02]"
               >
-                <span>Launch Live App</span>
+                <span>Launch Website</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
             </Magnetic>
@@ -173,8 +173,8 @@ export const Projects: React.FC = () => {
     <section id="projects" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
       <SectionHeading
         index="03 // Featured Works"
-        title="Recent live projects & applications."
-        subtitle="Explore recent production platforms, web systems, and full-stack software built with performance, responsiveness, and clean motion."
+        title="Recent websites & web applications."
+        subtitle="Explore bespoke client platforms, business websites, and full-stack software built with sub-second performance, responsiveness, and clean motion."
       />
 
       {/* Spacious Editorial Showcase List with Parallax Float */}

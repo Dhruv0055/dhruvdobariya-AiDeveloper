@@ -47,7 +47,7 @@ export const Footer: React.FC = () => {
               Dhruv Dobariya
             </h3>
             <p className="text-sm text-light-subtext dark:text-dark-subtext max-w-sm leading-relaxed font-light">
-              AI Web Developer & Designer. Architecting modern web applications, autonomous workflows, and high-impact digital products.
+              Website Developer & Designer. Architecting modern web applications, bespoke business platforms, and high-impact digital products.
             </p>
             <div className="flex items-center gap-3 pt-2">
               <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border font-mono text-[11px] text-light-text dark:text-dark-text">
@@ -80,7 +80,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <a href="#ai-assistant" className="text-light-subtext dark:text-dark-subtext hover:text-accent dark:hover:text-accent-light transition-colors">
-                  AI Assistant
+                  Virtual Assistant
                 </a>
               </li>
               <li>

@@ -3,31 +3,31 @@ import type { ExperienceItem } from "../types";
 export const experiences: ExperienceItem[] = [
   {
     period: "2024 — Present",
-    role: "Senior AI Web Engineer & Designer",
-    company: "Autonomous AI Studio",
+    role: "Lead Full-Stack Web Developer & Designer",
+    company: "Digital Product Studio",
     location: "Remote",
     type: "Work",
-    description: "Leading the development of intelligent generative web interfaces, multi-agent workflow systems, and production RAG applications with high-fidelity frontend craft.",
+    description: "Leading the development of high-performance modern web platforms, bespoke client architectures, and production full-stack applications with high-fidelity frontend craft.",
     achievements: [
-      "Architected real-time multi-agent canvas application handling 100k+ monthly workflow executions.",
-      "Engineered hybrid search RAG pipeline decreasing citation retrieval latency by 45%.",
-      "Designed and implemented unified design system across 4 web platforms with strict accessibility standards."
+      "Architected real-time web applications handling 100k+ monthly active visitor sessions.",
+      "Engineered optimized Next.js 15 SSR/SSG pipelines decreasing initial page load times by 45%.",
+      "Designed and implemented unified design systems across multiple web platforms with strict accessibility standards."
     ],
-    tech: ["React", "TypeScript", "Next.js", "FastAPI", "LangChain", "Tailwind CSS", "Figma"]
+    tech: ["React", "TypeScript", "Next.js 15", "Node.js", "Tailwind CSS", "Figma", "Vercel"]
   },
   {
     period: "2023 — 2024",
-    role: "Full-Stack AI Developer",
-    company: "Cognitive Tech Lab",
+    role: "Full-Stack Web Developer",
+    company: "Modern Web Labs",
     location: "Remote / Hybrid",
     type: "Work",
-    description: "Built scalable web applications integrated with OpenAI, Claude, and Gemini APIs, focusing on responsive UI micro-interactions and low-latency streaming.",
+    description: "Built scalable web applications, custom API integrations, and responsive client platforms focusing on high conversion, fluid micro-interactions, and sub-second load speeds.",
     achievements: [
-      "Pioneered streaming generative UI components delivering sub-100ms first-token render times.",
-      "Integrated vector database search across 5M+ knowledge documents with hybrid ranking.",
-      "Mentored junior engineers in TypeScript best practices, design token workflows, and Framer Motion."
+      "Pioneered responsive UI component libraries delivering sub-100ms interaction response times.",
+      "Integrated database schemas and secure RESTful endpoints for booking and clinic platforms.",
+      "Mentored junior developers in TypeScript best practices, design tokens, and clean responsive CSS."
     ],
-    tech: ["TypeScript", "Next.js", "Python", "Qdrant", "PostgreSQL", "Tailwind CSS"]
+    tech: ["TypeScript", "Next.js", "React", "PostgreSQL", "Tailwind CSS", "REST APIs"]
   },
   {
     period: "2022 — 2023",

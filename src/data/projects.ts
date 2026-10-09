@@ -2,6 +2,28 @@ import type { Project } from "../types";
 
 export const projects: Project[] = [
   {
+    id: "jivani-skin-clinic",
+    title: "Jivani Skin Clinic",
+    tagline: "Premier Dermatology, Laser Aesthetics & Clinical Trichology Platform",
+    category: "Web Applications",
+    featured: true,
+    year: "2025",
+    description: "A serene, high-trust clinical web platform engineered for Dr. Ruchi Goti (MD Dermatology) in Surat, featuring doctor consultation booking, laser guides, and dual-language support.",
+    longDescription: "A bespoke medical and aesthetic dermatology web platform engineered for Jivani Skin Clinic in Mota Varachha, Surat. Built with hospital-grade elegance, bilingual Gujarati/English interaction, doctor-led appointment booking pipelines, US-FDA approved laser treatment catalogs, and verified 4.9★ Google patient reviews.",
+    highlights: [
+      "Doctor-led clinical consultation & appointment booking pipeline with instant phone integration",
+      "Specialized treatment showcases for acne scars, melasma, PRP hair regrowth, and laser reduction",
+      "Bilingual Gujarati & English interface tailored for Surat's local patient demographic",
+      "High-trust clinical aesthetic featuring sterile white/sage palette and sub-second load times"
+    ],
+    metrics: ["4.9★ Google Rating", "12,500+ Patients", "US-FDA Approved Tech"],
+    techStack: ["Next.js 15", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+    liveUrl: "https://jivaniskinclinic.vercel.app/",
+    image: "/projects/jivani-skin-clinic.png",
+    imagePosition: "object-top",
+    accentColor: "#0D9488"
+  },
+  {
     id: "praval-jewels",
     title: "Praval Jewels",
     tagline: "Luxury Certified & Hallmarked Fine Jewellery Platform",

@@ -72,7 +72,7 @@ export const Contact: React.FC = () => {
       <SectionHeading
         index="05 // Direct Contact"
         title="Let's build something exceptional."
-        subtitle="Available for web development projects, AI implementations, and UI/UX engineering. Reach out directly via WhatsApp or Email."
+        subtitle="Available for bespoke website development, custom business platforms, and modern UI/UX engineering. Reach out directly via WhatsApp or Email."
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">

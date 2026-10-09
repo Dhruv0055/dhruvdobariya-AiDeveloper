@@ -7,71 +7,72 @@ export interface SimpleSkillGroup {
 
 export const simpleSkills: SimpleSkillGroup[] = [
   {
-    category: "AI & Autonomous Tools",
-    icon: "bot",
-    description: "Cutting-edge agentic workflows, LLM orchestration, and rapid AI builders.",
-    skills: [
-      "Google Antigravity",
-      "Claude 3.5 AI",
-      "ChatGPT (GPT-4o)",
-      "Lovable AI Builder",
-      "Immergent AI Workflows",
-      "LangChain & Agents"
-    ]
-  },
-  {
-    category: "Modern Frontend",
+    category: "Modern Web & Frontend",
     icon: "layout",
-    description: "Crafting blazing fast, accessible, and fluid web applications.",
+    description: "Crafting blazing fast, responsive, and tactile web applications.",
     skills: [
       "React & Next.js 15",
-      "TypeScript",
+      "TypeScript (Strict)",
       "Tailwind CSS",
       "Framer Motion",
-      "Interactive Canvas"
+      "Responsive Architecture",
+      "HTML5 & Semantic Web"
     ]
   },
   {
-    category: "Backend & Data Cloud",
+    category: "Full-Stack & Cloud",
     icon: "database",
-    description: "Scalable cloud services, vector databases, and real-time APIs.",
+    description: "Scalable web backends, database integrations, and robust cloud deployments.",
     skills: [
-      "Python (FastAPI)",
-      "DataStax Astra DB",
-      "Node.js",
+      "Node.js & Next.js API",
+      "RESTful APIs",
       "Supabase & PostgreSQL",
-      "WebSockets & REST"
+      "WebSockets & Realtime",
+      "Vercel Cloud Deployment",
+      "Python (FastAPI)"
     ]
   },
   {
-    category: "UI/UX & Creative Craft",
+    category: "UI/UX & Design Systems",
     icon: "pen-tool",
     description: "Bespoke design systems, typography hierarchy, and visual storytelling.",
     skills: [
-      "Figma UI Design",
+      "Figma UI/UX Design",
       "Design Systems",
-      "DaVinci Resolve",
-      "Responsive Layouts"
+      "Mobile-First Layouts",
+      "Micro-Interactions",
+      "Editorial Aesthetics"
+    ]
+  },
+  {
+    category: "Performance & Workflow",
+    icon: "sparkles",
+    description: "Sub-second load times, SEO optimization, and modern developer tooling.",
+    skills: [
+      "SEO Optimization",
+      "Vite & Build Tooling",
+      "Git & GitHub",
+      "AI-Assisted Workflows",
+      "Cross-Browser Testing"
     ]
   }
 ];
 
 export const toolsMarquee = [
-  "Google Antigravity",
-  "Claude 3.5 AI",
-  "ChatGPT (GPT-4o)",
-  "Lovable AI",
-  "Immergent",
-  "DataStax Astra DB",
+  "Next.js 15",
   "React",
-  "Next.js",
   "TypeScript",
   "Tailwind CSS",
-  "Python",
-  "FastAPI",
-  "LangChain",
+  "Node.js",
   "Figma",
   "Framer Motion",
+  "Vercel",
+  "PostgreSQL",
   "Supabase",
-  "PostgreSQL"
+  "REST APIs",
+  "Responsive UI",
+  "Google Antigravity",
+  "Claude AI",
+  "ChatGPT",
+  "Git & GitHub"
 ];

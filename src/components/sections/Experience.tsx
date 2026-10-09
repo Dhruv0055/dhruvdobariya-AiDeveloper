@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { SectionHeading } from "../ui/SectionHeading";
 import { experiences } from "../../data/experience";
@@ -12,7 +12,7 @@ export const Experience: React.FC = () => {
       <SectionHeading
         index="05 // Trajectory & Background"
         title="Experience & educational timeline."
-        subtitle="A track record of engineering scalable web systems, leading generative AI implementations, and mastering human-centered UI design."
+        subtitle="A proven track record of engineering scalable web systems, bespoke business platforms, and mastering human-centered UI design."
       />
 
       <div className="relative pl-6 sm:pl-10 space-y-12 border-l border-light-border dark:border-dark-border">

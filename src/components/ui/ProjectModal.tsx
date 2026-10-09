@@ -204,7 +204,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-xs font-mono font-normal bg-accent text-white hover:opacity-90 shadow-lg shadow-accent/20 transition-all hover:scale-[1.02]"
               >
-                <span>Launch Live App</span>
+                <span>Visit Live Website</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
             ) : (

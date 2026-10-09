@@ -10,13 +10,13 @@ const customEase: [number, number, number, number] = [0.22, 1, 0.36, 1];
 const principles = [
   {
     number: "01",
-    title: "Intelligent Systems & AI",
-    desc: "Connecting large language models, agentic workflows, and retrieval systems to solve real-world problems with low latency."
+    title: "Scalable Web Architecture",
+    desc: "Engineering robust frontend and full-stack solutions with Next.js, React, and TypeScript that load instantly and scale effortlessly."
   },
   {
     number: "02",
-    title: "High-Craft Web Engineering",
-    desc: "Developing fast, responsive, and reliable web applications in Next.js & React with clean architectures and type-safety."
+    title: "High-Conversion Business Websites",
+    desc: "Developing tailor-made web platforms for medical clinics, luxury brands, fitness centres, and high-growth digital agencies."
   },
   {
     number: "03",
@@ -30,7 +30,7 @@ export const About: React.FC = () => {
     <section id="about" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
       <SectionHeading
         index="01 // Background"
-        title="Where artificial intelligence meets clean web craftsmanship."
+        title="Where modern engineering meets clean web craftsmanship."
         subtitle="I believe the best digital experiences are built on clean code, bold typography, and intuitive motion."
       />
 
@@ -44,13 +44,13 @@ export const About: React.FC = () => {
           className="lg:col-span-7 space-y-6 text-base sm:text-lg text-light-subtext dark:text-dark-subtext leading-relaxed font-light"
         >
           <p>
-            I’m <strong className="text-light-text dark:text-dark-text font-semibold">Dhruv Dobariya</strong>, an AI Web Developer & Designer based in India. I specialize in building high-performance modern web platforms, autonomous AI agent tools, and creative digital showcases.
+            I’m <strong className="text-light-text dark:text-dark-text font-semibold">Dhruv Dobariya</strong>, a Website Developer & UI Designer based in India. I specialize in building high-performance modern websites, bespoke business web applications, and high-impact digital showcases.
           </p>
           <p>
             My work focuses on what truly matters: <span className="text-light-text dark:text-dark-text font-medium">ultra-fast loading speeds, clean responsive layouts, intuitive user journeys, and reliable cloud backends</span>.
           </p>
           <p>
-            Whether engineering platforms like <em>Mahadev Fitness Gym</em> or crafting interactive web applications, I bring meticulous attention to every pixel and line of code.
+            Whether engineering platforms like <em>Jivani Skin Clinic</em>, <em>Mahadev Fitness Gym</em>, or <em>Praval Jewels</em>, I bring meticulous attention to every pixel and line of code.
           </p>
 
           <div className="pt-2 flex flex-wrap items-center gap-4">
@@ -92,7 +92,7 @@ export const About: React.FC = () => {
                 Focus Areas
               </span>
               <p className="font-display font-light text-base text-light-text dark:text-dark-text mt-0.5">
-                AI Integrations • Modern Web • UI/UX Design
+                Website Development • Full-Stack Web • UI/UX Design
               </p>
             </div>
 

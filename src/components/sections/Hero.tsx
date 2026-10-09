@@ -34,21 +34,11 @@ export const Hero: React.FC = () => {
         animate="visible"
         className="space-y-8"
       >
-        {/* Top Badges */}
+        {/* Top Tech Badge */}
         <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-light-border dark:border-dark-border bg-light-surface/60 dark:bg-dark-surface/60 backdrop-blur-md shadow-sm">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
-            </span>
-            <span className="font-mono text-xs font-medium tracking-tight text-light-text dark:text-dark-text">
-              AI Web Developer & UI Designer
-            </span>
-          </div>
-
-          <div className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-light-border dark:border-dark-border bg-light-surface/40 dark:bg-dark-surface/40 backdrop-blur-md text-light-subtext dark:text-dark-subtext font-mono text-xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-light-border dark:border-dark-border bg-light-surface/50 dark:bg-dark-surface/50 backdrop-blur-md text-light-subtext dark:text-dark-subtext font-mono text-xs">
             <Sparkles className="w-3.5 h-3.5 text-accent" />
-            <span>Antigravity • Lovable • Claude AI • ChatGPT • Astra</span>
+            <span>Next.js 15 • React • TypeScript • Tailwind CSS • Modern UI/UX</span>
           </div>
         </motion.div>
 
@@ -57,7 +47,7 @@ export const Hero: React.FC = () => {
           <h1 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tight text-light-text dark:text-dark-text leading-[1.08]">
             Architecting <br className="hidden sm:inline" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-light-text via-accent to-light-text dark:from-white dark:via-blue-400 dark:to-neutral-400 font-normal">
-              intelligent interfaces
+              modern web platforms
             </span>{" "}
             & quiet craft.
           </h1>
@@ -69,7 +59,7 @@ export const Hero: React.FC = () => {
           className="text-lg sm:text-xl md:text-2xl text-light-subtext dark:text-dark-subtext max-w-2xl font-light leading-relaxed"
         >
           Hi, I’m <span className="font-normal text-light-text dark:text-dark-text">Dhruv Dobariya</span>.
-          I engineer full-stack web architectures, orchestrate autonomous AI agent workflows, and design high-conviction digital products with calm, fluid motion.
+          I design and develop high-conversion websites, modern full-stack web architectures, and seamless digital experiences with clean code and fluid motion.
         </motion.p>
 
         {/* Action Buttons */}
@@ -88,11 +78,11 @@ export const Hero: React.FC = () => {
           <Magnetic strength={20}>
             <a
               href="#ai-assistant"
-              data-cursor="Ask AI"
+              data-cursor="Assistant"
               className="inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 rounded-full border border-light-border dark:border-dark-border bg-light-surface dark:bg-dark-surface hover:bg-light-card dark:hover:bg-dark-card text-light-text dark:text-dark-text font-normal text-sm transition-all duration-200"
             >
               <Bot className="w-4 h-4 text-accent" />
-              <span>Talk with AI Clone</span>
+              <span>Ask Virtual Assistant</span>
             </a>
           </Magnetic>
         </motion.div>
@@ -115,7 +105,7 @@ export const Hero: React.FC = () => {
               15+
             </p>
             <p className="text-[11px] font-mono font-normal text-light-subtext dark:text-dark-subtext uppercase tracking-wider mt-1">
-              AI & Web Apps
+              Web Applications
             </p>
           </div>
           <div>
@@ -123,7 +113,7 @@ export const Hero: React.FC = () => {
               &lt;100ms
             </p>
             <p className="text-[11px] font-mono font-normal text-light-subtext dark:text-dark-subtext uppercase tracking-wider mt-1">
-              Stream Latency
+              Page Speed Load
             </p>
           </div>
           <div>
@@ -131,7 +121,7 @@ export const Hero: React.FC = () => {
               100%
             </p>
             <p className="text-[11px] font-mono font-normal text-light-subtext dark:text-dark-subtext uppercase tracking-wider mt-1">
-              Type-Safe Standard
+              Responsive Design
             </p>
           </div>
         </motion.div>

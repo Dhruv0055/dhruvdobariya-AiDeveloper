@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SectionHeading } from "../ui/SectionHeading";
 import { toolsMarquee } from "../../data/skills";
-import { Sparkles, ArrowRight, Bot, Layout, Database, PenTool, type LucideIcon } from "lucide-react";
+import { Sparkles, ArrowRight, Layout, Database, PenTool, type LucideIcon } from "lucide-react";
 
 interface SkillTrack {
   id: string;
@@ -15,78 +15,80 @@ interface SkillTrack {
 
 const skillTracks: SkillTrack[] = [
   {
-    id: "ai",
-    category: "AI & Autonomous Agent Tools",
-    subtitle: "LLM Orchestration • Agentic Workflows • Vector Search",
-    icon: Bot,
-    tools: [
-      "Google Antigravity",
-      "Claude 3.5 AI",
-      "ChatGPT (GPT-4o)",
-      "Lovable AI",
-      "Immergent",
-      "LangChain & Agents",
-      "Prompt Engineering"
-    ],
-    description: "Architecting autonomous multi-agent systems, structured function-calling schemas, and low-latency generative pipelines."
-  },
-  {
     id: "frontend",
-    category: "Modern Frontend Engineering",
-    subtitle: "React 19 • Next.js 15 • Fluid Spring Motion",
+    category: "Modern Web & Frontend Engineering",
+    subtitle: "React 19 • Next.js 15 • Tailwind CSS • TypeScript",
     icon: Layout,
     tools: [
-      "React & Next.js",
+      "Next.js 15",
+      "React 19",
       "TypeScript (Strict)",
       "Tailwind CSS",
       "Framer Motion",
-      "WebGL / Canvas",
-      "Responsive Architecture"
+      "Responsive Layouts",
+      "HTML5 & Web Standards"
     ],
-    description: "Developing blazing fast, accessible, and tactile web interfaces with sub-100ms first-token renders and 60fps animations."
+    description: "Developing blazing fast, accessible, and tactile web interfaces with sub-second page loads, SEO optimization, and 60fps fluid animations."
   },
   {
     id: "backend",
-    category: "Backend & Data Cloud",
-    subtitle: "FastAPI • Vector Databases • WebSockets",
+    category: "Full-Stack & Cloud Architecture",
+    subtitle: "Node.js • Next.js API • Supabase • PostgreSQL",
     icon: Database,
     tools: [
-      "Python (FastAPI)",
-      "DataStax Astra DB",
       "Node.js",
-      "Supabase & PostgreSQL",
-      "WebSockets SSE",
-      "RESTful APIs"
+      "Next.js Server Actions",
+      "PostgreSQL",
+      "Supabase",
+      "RESTful APIs",
+      "WebSockets Realtime",
+      "Vercel Cloud"
     ],
-    description: "Engineering scalable async microservices, hybrid vector search pipelines, and real-time bidirectional WebSocket event streams."
+    description: "Engineering scalable backend endpoints, database schemas, secure authentication, and seamless real-time WebSocket synchronization."
   },
   {
     id: "design",
-    category: "UI/UX & Creative Craft",
-    subtitle: "Figma • Design Systems • Visual Storytelling",
+    category: "UI/UX & Design Systems",
+    subtitle: "Figma • Design Systems • Minimalist Aesthetics",
     icon: PenTool,
     tools: [
       "Figma UI/UX",
       "Design Systems",
       "Typography Hierarchy",
-      "DaVinci Resolve",
-      "Micro-Interactions"
+      "Responsive Mobile-First",
+      "Micro-Interactions",
+      "Editorial Layouts"
     ],
     description: "Designing quiet, high-conviction digital products with generous whitespace, refined editorial typography, and human-centered ergonomics."
+  },
+  {
+    id: "tools",
+    category: "Workflow & Developer Tooling",
+    subtitle: "Git • Vite • Performance Auditing • AI Productivity",
+    icon: Sparkles,
+    tools: [
+      "Git & GitHub",
+      "Vite & Build Optimization",
+      "Lighthouse & Web Vitals",
+      "Cross-Browser Testing",
+      "Claude & ChatGPT AI Tooling",
+      "Google Antigravity"
+    ],
+    description: "Utilizing modern developer tooling, automated version control, and AI-accelerated workflows to ship clean, production-ready code faster."
   }
 ];
 
 const smoothEase: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 export const Skills: React.FC = () => {
-  const [activeTrack, setActiveTrack] = useState<string>("ai");
+  const [activeTrack, setActiveTrack] = useState<string>("frontend");
 
   return (
     <section id="skills" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
       <SectionHeading
         index="02 // Technical Directory"
-        title="Curated intelligence & engineering stack."
-        subtitle="Specialized in combining multi-agent AI frameworks, enterprise cloud data stores, and fluid frontend architectures."
+        title="Curated technical & web engineering stack."
+        subtitle="Specialized in crafting high-performance modern websites, robust full-stack architectures, and fluid digital interfaces."
       />
 
       {/* Non-Boxy Line-Divided Directory List */}

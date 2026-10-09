@@ -10,7 +10,7 @@ export const AiAssistant: React.FC = () => {
     {
       id: "1",
       sender: "assistant",
-      text: "Hello! I am Dhruv's AI Assistant. Ask me anything about his technical stack, engineering experience, recent projects, or design philosophy.",
+      text: "Hello! I am Dhruv's virtual assistant. Ask me anything about his web development stack, live client projects (Jivani Skin Clinic, Mahadev Fitness, Praval Jewels), or availability.",
       timestamp: "Just now"
     }
   ]);
@@ -35,6 +35,9 @@ export const AiAssistant: React.FC = () => {
 
   const generateAnswer = (query: string): string => {
     const q = query.toLowerCase();
+    if (q.includes("jivani") || q.includes("skin") || q.includes("clinic") || q.includes("doctor") || q.includes("ruchi")) {
+      return aiResponses.jivani || aiResponses.projects;
+    }
     if (q.includes("ryqon") || q.includes("agency")) {
       return aiResponses.ryqon || aiResponses.projects;
     }
@@ -44,10 +47,10 @@ export const AiAssistant: React.FC = () => {
     if (q.includes("mahadev") || q.includes("fitness") || q.includes("gym") || q.includes("body")) {
       return aiResponses.mahadev || aiResponses.bodylab || aiResponses.projects;
     }
-    if (q.includes("skill") || q.includes("tech") || q.includes("stack") || q.includes("tool") || q.includes("antigravity") || q.includes("claude") || q.includes("lovable")) {
+    if (q.includes("skill") || q.includes("tech") || q.includes("stack") || q.includes("tool") || q.includes("next") || q.includes("react")) {
       return aiResponses.skills;
     }
-    if (q.includes("project") || q.includes("built") || q.includes("portfolio")) {
+    if (q.includes("project") || q.includes("built") || q.includes("portfolio") || q.includes("work")) {
       return aiResponses.projects;
     }
     if (q.includes("contact") || q.includes("whatsapp") || q.includes("email") || q.includes("hire") || q.includes("reach") || q.includes("touch")) {
@@ -59,7 +62,7 @@ export const AiAssistant: React.FC = () => {
     if (q.includes("design") || q.includes("ui") || q.includes("ux")) {
       return aiResponses.design;
     }
-    return "Thanks for asking! Dhruv is an AI Web Developer & Designer skilled in Next.js, React, Google Antigravity, Claude 3.5 AI, ChatGPT, Lovable, Python, and modern UI/UX. Contact him directly on WhatsApp at +91 8160925636 or email dhruvdobariya005@gmail.com.";
+    return "Thanks for asking! Dhruv is a Website Developer & Designer specializing in Next.js, React, TypeScript, Tailwind CSS, bespoke business web applications, and modern UI/UX. Contact him directly on WhatsApp at +91 8160925636 or email dhruvdobariya005@gmail.com.";
   };
 
   const handleSendMessage = (textToSend?: string) => {
@@ -95,7 +98,7 @@ export const AiAssistant: React.FC = () => {
       {
         id: "1",
         sender: "assistant",
-        text: "Terminal reset. Ask me about Dhruv's background, AI tools, or availability.",
+        text: "Console reset. Ask me about Dhruv's web development stack, live projects, or availability.",
         timestamp: "Just now"
       }
     ]);
@@ -120,9 +123,9 @@ const smoothEase: [number, number, number, number] = [0.22, 1, 0.36, 1];
   return (
     <section id="ai-assistant" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
       <SectionHeading
-        index="04 // Interactive AI Sandbox"
-        title="Explore Dhruv’s stack via live assistant."
-        subtitle="Interact with the simulated AI assistant to learn about architecture decisions, tools, and availability without leaving the page."
+        index="04 // Interactive Q&A Assistant"
+        title="Explore Dhruv’s work & web stack."
+        subtitle="Interact with the virtual assistant to learn about live web projects, tech stacks, and development availability without leaving the page."
         align="center"
       />
 
@@ -144,7 +147,7 @@ const smoothEase: [number, number, number, number] = [0.22, 1, 0.36, 1];
             <div className="h-4 w-px bg-light-border dark:border-white/10" />
             <div className="flex items-center gap-2 font-mono text-xs text-light-subtext dark:text-dark-subtext">
               <Terminal className="w-3.5 h-3.5 text-accent" />
-              <span>dhruv-ai-agent-v1.4 • interactive sandbox</span>
+              <span>dhruv-web-assistant • interactive console</span>
             </div>
           </div>
 
@@ -199,7 +202,7 @@ const smoothEase: [number, number, number, number] = [0.22, 1, 0.36, 1];
               >
                 <div className="flex items-center gap-2 mb-1 opacity-70 text-[10px] font-mono">
                   {msg.sender === "assistant" && <Bot className="w-3 h-3 text-accent" />}
-                  <span>{msg.sender === "user" ? "Visitor" : "Dhruv AI Agent"}</span>
+                  <span>{msg.sender === "user" ? "Visitor" : "Dhruv Assistant"}</span>
                 </div>
                 <div className="text-xs sm:text-sm leading-relaxed">
                   {formatText(msg.text)}
@@ -231,7 +234,7 @@ const smoothEase: [number, number, number, number] = [0.22, 1, 0.36, 1];
             type="text"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
-            placeholder="Ask about AI tools, Praval Jewels, Body Lab, contact..."
+            placeholder="Ask about Jivani Skin Clinic, Praval Jewels, web stack, contact..."
             className="flex-1 bg-light-card/60 dark:bg-white/5 border border-light-border dark:border-white/10 rounded-xl px-4 py-3 text-xs sm:text-sm text-light-text dark:text-dark-text focus:outline-none focus:border-accent transition-colors placeholder:text-light-subtext/60 dark:placeholder:text-dark-subtext/60 font-sans"
           />
           <button
